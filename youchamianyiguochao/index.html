@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>油茶面 - 传统风味视频品牌 - 一碗暖香留住老手艺</title>
+<meta name="description" content="油茶面品牌官网，专注传统油茶面的原创影像记录与手艺传承，汇聚炒制技艺、风味故事与家庭餐桌的温暖内容，打造值得信赖的品质视频社区。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --amber:#c97a2b;
+  --amber-deep:#9a5418;
+  --amber-light:#e8a85c;
+  --cream:#fdf8f0;
+  --cream-dark:#f5e9d6;
+  --ink:#3a2c1e;
+  --ink-soft:#6b5337;
+  --line:#e6d5bb;
+  --shadow:0 8px 28px rgba(154,84,24,.12);
+}
+html{scroll-behavior:smooth;scroll-padding-top:112px}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.sticky-wrap{position:sticky;top:0;z-index:100}
+
+/* ===== 公告条 ===== */
+.announce{
+  background:linear-gradient(90deg,var(--amber-deep),var(--amber),var(--amber-light));
+  color:#fff;
+  font-size:.85rem;
+  padding:8px 20px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  overflow:hidden;
+}
+.announce .dot{
+  width:8px;height:8px;border-radius:50%;background:#ffe9c2;
+  flex:0 0 auto;animation:pulse 1.8s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+.announce .track{display:flex;gap:44px;white-space:nowrap;animation:slide 26s linear infinite}
+.announce .track span::before{content:"◆";margin-right:8px;color:#ffe9c2;font-size:.7rem}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ===== 页头 ===== */
+.header{
+  background:rgba(253,248,240,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1220px;margin:0 auto;padding:14px 24px;
+  display:flex;align-items:center;gap:26px;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.28rem;letter-spacing:.5px;color:var(--amber-deep);flex:0 0 auto}
+.logo .mark{
+  width:38px;height:38px;border-radius:12px;
+  background:radial-gradient(circle at 30% 25%,#f2c37e,#c97a2b 70%);
+  display:grid;place-items:center;color:#fff;font-size:1.05rem;font-weight:900;
+  box-shadow:inset 0 -3px 8px rgba(122,60,10,.35);
+}
+.logo small{display:block;font-size:.66rem;font-weight:500;color:var(--ink-soft);letter-spacing:2px}
+.nav-links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav-links a{
+  padding:8px 14px;border-radius:9px;font-size:.94rem;color:var(--ink-soft);
+  transition:.22s;position:relative;
+}
+.nav-links a:hover{background:var(--cream-dark);color:var(--amber-deep)}
+.search-box{
+  display:flex;align-items:center;gap:8px;
+  background:#fff;border:1.5px solid var(--line);border-radius:30px;
+  padding:6px 8px 6px 16px;min-width:210px;transition:.25s;
+}
+.search-box:focus-within{border-color:var(--amber);box-shadow:0 0 0 4px rgba(201,122,43,.12)}
+.search-box input{border:none;outline:none;background:transparent;font-size:.9rem;width:100%;color:var(--ink)}
+.search-box input::placeholder{color:#b9a385}
+.search-box button{
+  background:var(--amber);color:#fff;border-radius:20px;padding:5px 14px;font-size:.82rem;
+  transition:.2s;flex:0 0 auto;
+}
+.search-box button:hover{background:var(--amber-deep)}
+.menu-toggle{display:none;font-size:1.5rem;color:var(--amber-deep);margin-left:auto}
+.search-feedback{
+  max-width:1220px;margin:0 auto;padding:0 24px;
+  font-size:.82rem;color:var(--amber-deep);height:0;overflow:hidden;transition:.25s;
+}
+.search-feedback.show{height:auto;padding-bottom:10px}
+
+/* ===== 通用 ===== */
+.section{max-width:1220px;margin:0 auto;padding:72px 24px}
+.sec-head{margin-bottom:38px;max-width:780px}
+.eyebrow{
+  display:inline-block;font-size:.76rem;letter-spacing:3px;font-weight:700;
+  color:var(--amber);text-transform:uppercase;margin-bottom:10px;
+}
+.sec-head h2{
+  font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35;color:var(--ink);
+  letter-spacing:-.5px;
+}
+.sec-head h2 em{font-style:normal;color:var(--amber-deep);border-bottom:3px solid var(--amber-light)}
+.sec-head p{margin-top:12px;color:var(--ink-soft);font-size:.97rem}
+.tag{
+  display:inline-block;font-size:.74rem;padding:3px 10px;border-radius:20px;
+  background:rgba(201,122,43,.12);color:var(--amber-deep);font-weight:600;
+}
+
+/* ===== 首屏 ===== */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#fff7ea 0%,#f7e6cb 55%,#efd6b2 100%)}
+.hero::before{
+  content:"";position:absolute;right:-140px;top:-140px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,122,43,.16),transparent 68%);
+}
+.hero::after{
+  content:"";position:absolute;left:-120px;bottom:-160px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(154,84,24,.1),transparent 70%);
+}
+.hero-inner{
+  max-width:1220px;margin:0 auto;padding:78px 24px 84px;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;
+  position:relative;z-index:2;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);border-radius:30px;
+  padding:6px 16px;font-size:.8rem;color:var(--amber-deep);font-weight:600;margin-bottom:20px;
+  box-shadow:var(--shadow);
+}
+.hero-badge .p{width:7px;height:7px;border-radius:50%;background:var(--amber)}
+h1{
+  font-size:clamp(2.2rem,5vw,3.5rem);line-height:1.18;letter-spacing:-1.5px;
+  color:var(--ink);font-weight:900;margin-bottom:22px;
+}
+h1 .hl{
+  background:linear-gradient(180deg,transparent 62%,rgba(232,168,92,.55) 62%);
+  color:var(--amber-deep);
+}
+.hero-lead{font-size:1rem;color:var(--ink-soft);margin-bottom:14px;max-width:560px}
+.hero-desc{font-size:.97rem;color:var(--ink-soft);max-width:560px;margin-bottom:30px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.btn{
+  padding:13px 28px;border-radius:32px;font-size:.95rem;font-weight:700;
+  transition:.25s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-primary{background:var(--amber-deep);color:#fff;box-shadow:0 10px 24px rgba(154,84,24,.28)}
+.btn-primary:hover{background:#7d4312;transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--amber-deep);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--amber);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:44px;flex-wrap:wrap}
+.hero-stats .num{font-size:1.9rem;font-weight:900;color:var(--amber-deep);line-height:1.1}
+.hero-stats .num span{font-size:.95rem;font-weight:600;color:var(--ink-soft)}
+.hero-stats .lbl{font-size:.82rem;color:var(--ink-soft);margin-top:2px}
+.hero-visual{position:relative}
+.hero-cover{
+  border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(122,60,10,.26);
+  position:relative;aspect-ratio:4/3;background:#c97a2b;
+}
+.hero-cover img{width:100%;height:100%;object-fit:cover}
+.hero-cover .play{
+  position:absolute;inset:0;display:grid;place-items:center;
+}
+.hero-cover .play span{
+  width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.92);
+  display:grid;place-items:center;font-size:1.5rem;color:var(--amber-deep);
+  box-shadow:0 12px 30px rgba(0,0,0,.28);transition:.25s;
+}
+.hero-cover:hover .play span{transform:scale(1.1)}
+.hero-float{
+  position:absolute;bottom:-24px;left:-24px;background:#fff;border-radius:18px;
+  padding:16px 20px;box-shadow:0 16px 40px rgba(122,60,10,.2);display:flex;gap:14px;align-items:center;
+  max-width:280px;
+}
+.hero-float .av{
+  width:48px;height:48px;border-radius:14px;flex:0 0 auto;
+  background:linear-gradient(135deg,#e8a85c,#9a5418);display:grid;place-items:center;
+  color:#fff;font-weight:800;font-size:1.1rem;
+}
+.hero-float .t1{font-size:.86rem;font-weight:700}
+.hero-float .t2{font-size:.75rem;color:var(--ink-soft)}
+
+/* ===== 焦点内容 ===== */
+.focus-wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:24px}
+.focus-main{
+  border-radius:22px;overflow:hidden;position:relative;background:#2a1c0f;
+  display:flex;flex-direction:column;box-shadow:var(--shadow);
+}
+.focus-main .cover{aspect-ratio:16/9;overflow:hidden;position:relative}
+.focus-main .cover img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.focus-main:hover .cover img{transform:scale(1.05)}
+.focus-main .cover .vt{
+  position:absolute;top:14px;left:14px;background:rgba(0,0,0,.5);color:#fff;
+  font-size:.74rem;padding:4px 12px;border-radius:20px;backdrop-filter:blur(4px);
+}
+.focus-main .body{padding:22px 24px 24px;background:#fff}
+.focus-main .body h3{font-size:1.24rem;margin-bottom:10px;line-height:1.45}
+.focus-main .body p{font-size:.9rem;color:var(--ink-soft);margin-bottom:14px}
+.meta-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:.8rem;color:var(--ink-soft)}
+.meta-row .author{display:flex;align-items:center;gap:7px;font-weight:600;color:var(--amber-deep)}
+.meta-row .author .a{
+  width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#e8a85c,#c97a2b);
+  display:grid;place-items:center;color:#fff;font-size:.72rem;font-weight:800;
+}
+.focus-side{display:grid;gap:16px}
+.mini{
+  display:grid;grid-template-columns:132px 1fr;gap:14px;background:#fff;border-radius:16px;
+  padding:10px;box-shadow:0 4px 16px rgba(154,84,24,.08);transition:.25s;border:1px solid transparent;
+}
+.mini:hover{transform:translateY(-3px);border-color:var(--line);box-shadow:var(--shadow)}
+.mini .th{aspect-ratio:16/10;border-radius:10px;overflow:hidden;position:relative;background:#e8d3b3}
+.mini .th img{width:100%;height:100%;object-fit:cover}
+.mini h4{font-size:.92rem;line-height:1.4;margin-bottom:6px}
+.mini span{font-size:.75rem;color:var(--ink-soft)}
+
+/* ===== 视频流 ===== */
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.vcard{
+  background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 18px rgba(154,84,24,.09);
+  display:flex;flex-direction:column;transition:.3s;border:1px solid transparent;
+}
+.vcard:hover{transform:translateY(-5px);box-shadow:0 18px 42px rgba(154,84,24,.16);border-color:var(--line)}
+.vcard .cover{aspect-ratio:16/9;position:relative;overflow:hidden}
+.vcard .cover img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.vcard:hover .cover img{transform:scale(1.06)}
+.vcard .cover .tag{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.92);backdrop-filter:blur(4px)}
+.vcard .cover .dur{
+  position:absolute;bottom:10px;right:12px;background:rgba(0,0,0,.6);color:#fff;
+  font-size:.72rem;padding:2px 9px;border-radius:6px;
+}
+.vcard .body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.vcard h3{font-size:1.02rem;line-height:1.45;margin-bottom:8px}
+.vcard p{font-size:.84rem;color:var(--ink-soft);margin-bottom:12px;flex:1}
+.vcard .meta-row{justify-content:space-between;border-top:1px dashed var(--line);padding-top:12px}
+.act-btns{display:flex;gap:8px}
+.act{
+  display:inline-flex;align-items:center;gap:4px;font-size:.78rem;color:var(--ink-soft);
+  padding:4px 9px;border-radius:8px;transition:.2s;
+}
+.act:hover{background:var(--cream-dark);color:var(--amber-deep)}
+.act.on{color:#d2483a;font-weight:700}
+.act.fav.on{color:var(--amber-deep)}
+
+/* ===== 专题 ===== */
+.special-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.special{
+  position:relative;border-radius:18px;overflow:hidden;min-height:300px;
+  display:flex;flex-direction:column;justify-content:flex-end;color:#fff;padding:22px;
+  box-shadow:var(--shadow);
+}
+.special img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:.5s}
+.special:hover img{transform:scale(1.07)}
+.special::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(30,18,6,.05) 20%,rgba(30,18,6,.82) 100%);
+}
+.special>*{position:relative;z-index:2}
+.special .st{font-size:.72rem;background:rgba(255,255,255,.22);padding:3px 10px;border-radius:20px;align-self:flex-start;margin-bottom:auto;backdrop-filter:blur(4px)}
+.special h3{font-size:1.1rem;margin-bottom:6px;line-height:1.35}
+.special p{font-size:.8rem;opacity:.88;line-height:1.6}
+
+/* ===== 创作者 ===== */
+.creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.creator{
+  background:#fff;border-radius:18px;padding:22px;display:flex;gap:16px;
+  box-shadow:0 4px 18px rgba(154,84,24,.08);transition:.28s;border:1px solid transparent;
+}
+.creator:hover{transform:translateY(-4px);border-color:var(--line);box-shadow:var(--shadow)}
+.creator .av{
+  width:60px;height:60px;border-radius:16px;flex:0 0 auto;display:grid;place-items:center;
+  color:#fff;font-weight:900;font-size:1.3rem;
+}
+.creator h3{font-size:1.02rem;margin-bottom:4px}
+.creator .role{font-size:.78rem;color:var(--amber);font-weight:700;margin-bottom:8px}
+.creator p{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.creator .st{display:flex;gap:16px;font-size:.76rem;color:var(--ink-soft)}
+.creator .st b{color:var(--ink);font-weight:800}
+
+/* ===== 故事/随笔 ===== */
+.story-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.story{
+  background:linear-gradient(160deg,#fff,#fdf3e4);border-radius:18px;padding:26px 24px;
+  border:1px solid var(--line);position:relative;overflow:hidden;
+}
+.story::before{
+  content:"“";position:absolute;top:-10px;right:12px;font-size:6rem;color:rgba(201,122,43,.13);
+  font-family:Georgia,serif;line-height:1;
+}
+.story h3{font-size:1rem;margin-bottom:10px;color:var(--amber-deep)}
+.story p{font-size:.85rem;color:var(--ink-soft);margin-bottom:14px;position:relative;z-index:1}
+.story .who{font-size:.78rem;font-weight:700;color:var(--ink)}
+
+/* ===== 影像墙 ===== */
+.wall{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:16px}
+.wall figure{
+  position:relative;border-radius:14px;overflow:hidden;background:#e8d3b3;
+}
+.wall figure img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.wall figure:hover img{transform:scale(1.08)}
+.wall figcaption{
+  position:absolute;inset:auto 0 0 0;padding:22px 14px 10px;color:#fff;font-size:.78rem;
+  background:linear-gradient(transparent,rgba(30,18,6,.78));font-weight:600;
+}
+.wall .big{grid-column:span 2;grid-row:span 2}
+.wall .wide{grid-column:span 2}
+.wall .tall{grid-row:span 2}
+
+/* ===== 评价 ===== */
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{
+  background:#fff;border-radius:16px;padding:20px;box-shadow:0 4px 16px rgba(154,84,24,.07);
+  border-left:4px solid var(--amber-light);transition:.25s;
+}
+.review:hover{border-left-color:var(--amber-deep);box-shadow:var(--shadow)}
+.review .stars{color:#e8a85c;font-size:.82rem;letter-spacing:2px;margin-bottom:10px}
+.review p{font-size:.87rem;color:var(--ink-soft);margin-bottom:14px}
+.review .who{display:flex;align-items:center;gap:9px;font-size:.8rem;font-weight:700}
+.review .who .a{
+  width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+  color:#fff;font-size:.72rem;font-weight:800;
+}
+
+/* ===== 动态/FAQ ===== */
+.dyn-faq{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:start}
+.dyn-item{
+  display:grid;grid-template-columns:92px 1fr;gap:16px;padding:16px 0;border-bottom:1px dashed var(--line);
+}
+.dyn-item .date{font-size:.78rem;color:var(--amber-deep);font-weight:700;line-height:1.5}
+.dyn-item h4{font-size:.94rem;margin-bottom:4px}
+.dyn-item p{font-size:.82rem;color:var(--ink-soft)}
+details.faq{
+  background:#fff;border-radius:12px;margin-bottom:10px;border:1px solid var(--line);
+  overflow:hidden;transition:.25s;
+}
+details.faq[open]{border-color:var(--amber-light);box-shadow:0 6px 20px rgba(154,84,24,.1)}
+details.faq summary{
+  padding:14px 18px;font-size:.92rem;font-weight:600;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:10px;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"＋";color:var(--amber);font-weight:800;transition:.25s}
+details.faq[open] summary::after{content:"－"}
+details.faq p{padding:0 18px 16px;font-size:.85rem;color:var(--ink-soft)}
+
+/* ===== 投稿/联系 ===== */
+.cta-band{
+  background:linear-gradient(135deg,#8a4a12,#c97a2b 60%,#e8a85c);
+  border-radius:26px;padding:52px 44px;color:#fff;display:grid;
+  grid-template-columns:1.3fr 1fr;gap:36px;align-items:center;
+  box-shadow:0 22px 50px rgba(138,74,18,.28);position:relative;overflow:hidden;
+}
+.cta-band::before{
+  content:"";position:absolute;right:-80px;top:-80px;width:300px;height:300px;border-radius:50%;
+  background:rgba(255,255,255,.1);
+}
+.cta-band h2{font-size:clamp(1.5rem,2.6vw,2rem);margin-bottom:12px;line-height:1.3;position:relative;z-index:1}
+.cta-band p{font-size:.94rem;opacity:.92;position:relative;z-index:1}
+.cta-form{display:flex;flex-direction:column;gap:12px;position:relative;z-index:1}
+.cta-form input{
+  padding:13px 18px;border-radius:12px;border:none;font-size:.9rem;outline:none;
+  background:rgba(255,255,255,.94);color:var(--ink);
+}
+.cta-form button{
+  padding:13px;border-radius:12px;background:#3a2c1e;color:#fff;font-weight:700;font-size:.92rem;
+  transition:.22s;
+}
+.cta-form button:hover{background:#2a1c0f}
+
+/* ===== 页脚 ===== */
+.footer{background:#2d2013;color:#d9c5a8;padding:56px 24px 26px;margin-top:24px}
+.footer-inner{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:38px}
+.footer h4{color:#fff;font-size:.95rem;margin-bottom:14px}
+.footer p{font-size:.83rem;line-height:1.85;opacity:.82}
+.footer ul{list-style:none}
+.footer li{margin-bottom:9px;font-size:.83rem;opacity:.82}
+.footer li a:hover{color:var(--amber-light)}
+.footer .flogo{display:flex;align-items:center;gap:10px;margin-bottom:14px;color:#fff;font-weight:800;font-size:1.12rem}
+.footer .flogo .mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#e8a85c,#9a5418);display:grid;place-items:center;font-size:.95rem}
+.copy{
+  max-width:1220px;margin:38px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.78rem;opacity:.72;
+}
+
+/* ===== Toast & 弹窗 ===== */
+.toast{
+  position:fixed;left:50%;bottom:38px;transform:translate(-50%,20px);
+  background:#2d2013;color:#fff;padding:12px 24px;border-radius:30px;font-size:.86rem;
+  opacity:0;pointer-events:none;transition:.3s;z-index:999;box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.modal-mask{
+  position:fixed;inset:0;background:rgba(30,18,6,.55);backdrop-filter:blur(3px);
+  display:none;place-items:center;z-index:98;padding:20px;
+}
+.modal-mask.show{display:grid}
+.modal{
+  background:var(--cream);border-radius:20px;max-width:520px;width:100%;padding:30px;
+  box-shadow:0 30px 70px rgba(0,0,0,.4);position:relative;
+}
+.modal h3{font-size:1.2rem;margin-bottom:8px;color:var(--amber-deep)}
+.modal .sub{font-size:.84rem;color:var(--ink-soft);margin-bottom:18px}
+.modal textarea,.modal input{
+  width:100%;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);
+  font-family:inherit;font-size:.88rem;margin-bottom:12px;outline:none;background:#fff;color:var(--ink);
+}
+.modal textarea{resize:vertical;min-height:96px}
+.modal textarea:focus,.modal input:focus{border-color:var(--amber)}
+.modal .close{
+  position:absolute;top:14px;right:16px;font-size:1.3rem;color:var(--ink-soft);
+  width:32px;height:32px;border-radius:50%;display:grid;place-items:center;transition:.2s;
+}
+.modal .close:hover{background:var(--cream-dark)}
+.modal .send{
+  width:100%;padding:12px;border-radius:12px;background:var(--amber-deep);color:#fff;
+  font-weight:700;transition:.2s;
+}
+.modal .send:hover{background:#7d4312}
+.share-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.share-row button{
+  padding:12px;border-radius:12px;background:#fff;border:1.5px solid var(--line);
+  font-size:.85rem;font-weight:600;color:var(--ink-soft);transition:.2s;
+}
+.share-row button:hover{border-color:var(--amber);color:var(--amber-deep)}
+
+#topBtn{
+  position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;
+  background:var(--amber-deep);color:#fff;font-size:1.1rem;display:grid;place-items:center;
+  box-shadow:0 10px 26px rgba(154,84,24,.4);opacity:0;pointer-events:none;transition:.3s;z-index:80;
+}
+#topBtn.show{opacity:1;pointer-events:auto}
+#topBtn:hover{transform:translateY(-3px)}
+
+/* ===== 响应式 ===== */
+@media(max-width:1000px){
+  .hero-inner{grid-template-columns:1fr;gap:44px;padding-top:56px}
+  .focus-wrap{grid-template-columns:1fr}
+  .video-grid{grid-template-columns:repeat(2,1fr)}
+  .special-grid{grid-template-columns:repeat(2,1fr)}
+  .creator-grid{grid-template-columns:1fr}
+  .story-wrap{grid-template-columns:1fr}
+  .review-grid{grid-template-columns:1fr 1fr}
+  .dyn-faq{grid-template-columns:1fr;gap:34px}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .cta-band{grid-template-columns:1fr;padding:38px 28px}
+  .wall{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}
+}
+@media(max-width:720px){
+  .nav-links,.search-box{display:none}
+  .menu-toggle{display:block}
+  .header.open .nav-inner{flex-wrap:wrap}
+  .header.open .nav-links,.header.open .search-box{display:flex;width:100%}
+  .header.open .nav-links{flex-direction:column;gap:2px;margin-top:8px}
+  .header.open .nav-links a{padding:11px 14px;background:var(--cream-dark)}
+  .header.open .search-box{margin-top:10px}
+  .video-grid,.special-grid,.review-grid{grid-template-columns:1fr}
+  .wall{grid-template-columns:1fr 1fr}
+  .wall .big,.wall .wide,.wall .tall{grid-column:span 2;grid-row:span 1}
+  .hero-stats{gap:26px}
+  .footer-inner{grid-template-columns:1fr}
+  .section{padding:52px 18px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <!-- 公告条 -->
+  <div class="announce" id="announce">
+    <span class="dot"></span>
+    <div class="track">
+      <span>“秋炒油茶面”第三季更新至第 12 集：老灶铁锅的翻砂诀窍</span>
+      <span>2024 油茶面手艺征集开启报名，投稿即有机会参与线下同炒</span>
+      <span>新专题《一碗面的早与晚》上线，收录 8 城早餐影像</span>
+      <span>创作者招募：家庭炒制、面点师、民俗记录者均可上传作品</span>
+      <span>官方发布：油茶面风味词库 V2，开放下载</span>
+      <span>“秋炒油茶面”第三季更新至第 12 集：老灶铁锅的翻砂诀窍</span>
+      <span>2024 油茶面手艺征集开启报名，投稿即有机会参与线下同炒</span>
+      <span>新专题《一碗面的早与晚》上线，收录 8 城早餐影像</span>
+      <span>创作者招募：家庭炒制、面点师、民俗记录者均可上传作品</span>
+      <span>官方发布：油茶面风味词库 V2，开放下载</span>
+    </div>
+  </div>
+
+  <!-- 页头 -->
+  <header class="header" id="header">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">
+        <span class="mark">油</span>
+        <span>油茶面<small>YOUCHA MIAN</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="展开导航">☰</button>
+      <nav class="nav-links">
+        <a href="#hero">首页</a>
+        <a href="#focus">焦点视频</a>
+        <a href="#videos">风味内容</a>
+        <a href="#special">专题企划</a>
+        <a href="#creators">创作者</a>
+        <a href="#wall">影像墙</a>
+        <a href="#news">企业动态</a>
+        <a href="#contact">联系投稿</a>
+      </nav>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="搜索炒制、配方、城市…" aria-label="站内搜索">
+        <button id="searchBtn">搜索</button>
+      </div>
+    </div>
+    <div class="search-feedback" id="searchFeedback"></div>
+  </header>
+</div>
+
+<!-- ===== 首屏 ===== -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><span class="p"></span>油茶面品牌官方网站 · 持续运营 11 年</div>
+      <h1>油茶面<span class="hl">，一锅炒香里的老手艺</span></h1>
+      <p class="hero-lead">以影像记录面粉与油脂在铁锅中的相遇，把散落在灶台边的配方、火候与耐心，留给更多人看见。</p>
+      <p class="hero-desc">油茶面官方网站是一个专注传统炒制风味的原创视频品牌平台。我们深耕油茶面这一垂直领域，联合家庭手艺人、面点师与民俗记录者，持续产出高清、专业的风味精讲与生活影像，构建值得信赖的内容生态。作为企业级内容团队，我们坚持正版素材、真实记录与用户至上的原则，让一碗面从灶台走向更广阔的社区。</p>
+      <div class="hero-actions">
+        <a href="#focus" class="btn btn-primary">▶ 进入焦点视频</a>
+        <a href="#creators" class="btn btn-ghost">认识创作者</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="num">1,860<span>+</span></div>
+          <div class="lbl">原创视频作品</div>
+        </div>
+        <div>
+          <div class="num">430<span>位</span></div>
+          <div class="lbl">认证创作者</div>
+        </div>
+        <div>
+          <div class="num">96.4<span>%</span></div>
+          <div class="lbl">社区好评率</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-cover">
+        <img alt="铁锅中翻炒油茶面的金黄面粉与芝麻" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f6d9a8'/%3E%3Cstop offset='1' stop-color='%23a45a1c'/%3E%3C/linearGradient%3E%3CradialGradient id='r1' cx='0.4' cy='0.35' r='0.7'%3E%3Cstop offset='0' stop-color='%23fff3d6'/%3E%3Cstop offset='1' stop-color='%23b4671f'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g1)'/%3E%3Cellipse cx='400' cy='430' rx='300' ry='110' fill='%237a3c0a' opacity='0.28'/%3E%3Cellipse cx='400' cy='360' rx='250' ry='150' fill='%233a2410'/%3E%3Cellipse cx='400' cy='345' rx='225' ry='128' fill='url(%23r1)'/%3E%3Cellipse cx='400' cy='330' rx='190' ry='100' fill='%23e0a55a'/%3E%3Cellipse cx='400' cy='320' rx='150' ry='76' fill='%23efc07c'/%3E%3Cg fill='%23fff2cf' opacity='0.85'%3E%3Ccircle cx='330' cy='300' r='4'/%3E%3Ccircle cx='372' cy='286' r='3'/%3E%3Ccircle cx='420' cy='306' r='4'/%3E%3Ccircle cx='468' cy='292' r='3'/%3E%3Ccircle cx='356' cy='330' r='3'/%3E%3Ccircle cx='444' cy='340' r='4'/%3E%3Ccircle cx='392' cy='272' r='2.5'/%3E%3Ccircle cx='500' cy='318' r='3'/%3E%3Ccircle cx='300' cy='322' r='2.5'/%3E%3C/g%3E%3Cg stroke='%23fbe0b0' stroke-width='3' opacity='0.55'%3E%3Cpath d='M250 250 Q330 200 420 250' fill='none'/%3E%3Cpath d='M300 210 Q400 160 500 215' fill='none'/%3E%3Cpath d='M360 175 Q450 140 540 190' fill='none'/%3E%3C/g%3E%3Ccircle cx='330' cy='360' r='14' fill='%23f7e0b4' opacity='0.7'/%3E%3Ccircle cx='470' cy='368' r='10' fill='%23f7e0b4' opacity='0.6'/%3E%3C/svg%3E">
+        <div class="play"><span>▶</span></div>
+      </div>
+      <div class="hero-float">
+        <div class="av">炒</div>
+        <div>
+          <div class="t1">本周焦点：翻砂三诀</div>
+          <div class="t2">火候 · 油温 · 手速</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 焦点视频 ===== -->
+<section class="section" id="focus">
+  <div class="sec-head">
+    <span class="eyebrow">FOCUS / 焦点视频</span>
+    <h2>先看这三段<em>关键影像</em></h2>
+    <p>由官方内容团队与资深手艺人共同完成，从选料到出锅，逐段拆解油茶面的风味逻辑。</p>
+  </div>
+  <div class="focus-wrap">
+    <article class="focus-main">
+      <div class="cover">
+        <img alt="老灶铁锅翻炒油茶面的主视觉封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 540'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23fef3dc'/%3E%3Cstop offset='1' stop-color='%23c97a2b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='960' height='540' fill='url(%23f1)'/%3E%3Ccircle cx='720' cy='120' r='160' fill='%23ffe9c2' opacity='0.55'/%3E%3Crect x='0' y='360' width='960' height='180' fill='%238a4a12' opacity='0.35'/%3E%3Cellipse cx='470' cy='360' rx='280' ry='90' fill='%233a2410'/%3E%3Cellipse cx='470' cy='345' rx='255' ry='78' fill='%23d99a4e'/%3E%3Cellipse cx='470' cy='336' rx='215' ry='60' fill='%23f0c07a'/%3E%3Cg fill='%23fff4d8'%3E%3Ccircle cx='360' cy='320' r='5'/%3E%3Ccircle cx='420' cy='306' r='4'/%3E%3Ccircle cx='500' cy='322' r='5'/%3E%3Ccircle cx='560' cy='336' r='4'/%3E%3Ccircle cx='452' cy='348' r='4'/%3E%3C/g%3E%3Cg stroke='%23fff8e6' stroke-width='4' opacity='0.6' fill='none'%3E%3Cpath d='M300 240 Q420 190 560 250'/%3E%3Cpath d='M340 200 Q470 150 620 220'/%3E%3C/g%3E%3Crect x='700' y='260' width='150' height='14' rx='7' fill='%238a4a12' opacity='0.6'/%3E%3Crect x='740' y='240' width='14' height='90' rx='7' fill='%238a4a12' opacity='0.5'/%3E%3C/svg%3E">
+        <span class="vt">官方发布 · 18:42</span>
+      </div>
+      <div class="body">
+        <h3>翻砂十八铲：家庭铁锅炒油茶面的火候全解</h3>
+        <p>从小火焙面到油脂裹粉，一段完整记录老手艺人在自家灶台前完成整锅炒制的影像。片中逐铲讲解面粉由白转黄、由散转润的关键判断，并标注油温梯度与翻炒节奏，适合初次尝试者跟做。</p>
+        <div class="meta-row">
+          <span class="author"><span class="a">赵</span>赵师傅的灶台</span>
+          <span>12.6 万次播放</span>
+          <span>收藏 4,210</span>
+        </div>
+      </div>
+    </article>
+    <div class="focus-side">
+      <a href="#videos" class="mini">
+        <div class="th"><img alt="芝麻与核桃仁在案板上备料的封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23f7e8cf'/%3E%3Crect x='0' y='120' width='320' height='80' fill='%23d9b483'/%3E%3Ccircle cx='80' cy='90' r='20' fill='%238a5a2b'/%3E%3Ccircle cx='120' cy='100' r='14' fill='%23a8723a'/%3E%3Ccircle cx='170' cy='86' r='17' fill='%238a5a2b'/%3E%3Ccircle cx='210' cy='104' r='11' fill='%23b98550'/%3E%3Ccircle cx='250' cy='92' r='15' fill='%238a5a2b'/%3E%3Cg fill='%23f3d9a8'%3E%3Ccircle cx='150' cy='130' r='3'/%3E%3Ccircle cx='185' cy='140' r='3'/%3E%3Ccircle cx='230' cy='128' r='3'/%3E%3Ccircle cx='105' cy='145' r='3'/%3E%3C/g%3E%3C/svg%3E"></div>
+        <div>
+          <h4>备料清单：面粉、牛油、芝麻与核桃的比例</h4>
+          <span>实用技巧 · 09:15</span>
+        </div>
+      </a>
+      <a href="#videos" class="mini">
+        <div class="th"><img alt="清晨街边油茶面摊位的城市探索封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23bcd4e6'/%3E%3Crect x='0' y='130' width='320' height='70' fill='%237a7f88'/%3E%3Crect x='30' y='70' width='90' height='70' fill='%23e8dcc8'/%3E%3Crect x='50' y='90' width='50' height='30' fill='%23c97a2b'/%3E%3Crect x='150' y='50' width='120' height='90' fill='%23dfd0b3'/%3E%3Crect x='165' y='70' width='40' height='24' fill='%239a5418'/%3E%3Crect x='215' y='70' width='40' height='24' fill='%239a5418'/%3E%3Ccircle cx='270' cy='40' r='18' fill='%23fff3d6' opacity='0.8'/%3E%3C/svg%3E"></div>
+        <div>
+          <h4>西安回坊清晨五点：一碗油茶面的城市温度</h4>
+          <span>城市探索 · 14:08</span>
+        </div>
+      </a>
+      <a href="#videos" class="mini">
+        <div class="th"><img alt="祖孙三代围坐喝油茶面的家庭故事封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23efd9bd'/%3E%3Crect x='0' y='140' width='320' height='60' fill='%23b98a55'/%3E%3Ccircle cx='90' cy='100' r='26' fill='%23e8a85c'/%3E%3Crect x='62' y='124' width='56' height='34' rx='12' fill='%23c97a2b'/%3E%3Ccircle cx='200' cy='92' r='22' fill='%23d99a4e'/%3E%3Crect x='176' y='112' width='48' height='30' rx='10' fill='%23a45a1c'/%3E%3Ccircle cx='260' cy='106' r='16' fill='%23e8c08a'/%3E%3Crect x='242' y='120' width='36' height='24' rx='8' fill='%23b98a55'/%3E%3C/svg%3E"></div>
+        <div>
+          <h4>奶奶的搪瓷罐：一份传了三代的油茶面配方</h4>
+          <span>人物访谈 · 21:30</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 风味内容 ===== -->
+<section class="section" id="videos" style="background:linear-gradient(180deg,transparent,#f8edda 30%,#f8edda 70%,transparent)">
+  <div class="sec-head">
+    <span class="eyebrow">CONTENT / 风味内容</span>
+    <h2>最近更新的<em>油茶面影像</em></h2>
+    <p>炒制教程、风味测评、城市早餐、家庭记忆……每一段都来自真实灶台，标注了可复核的配方与步骤。</p>
+  </div>
+  <div class="video-grid">
+    <article class="vcard">
+      <div class="cover">
+        <img alt="铁锅小火焙面至微黄的教程视频封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f4dfc0'/%3E%3Cellipse cx='240' cy='180' rx='160' ry='58' fill='%233a2410'/%3E%3Cellipse cx='240' cy='170' rx='145' ry='48' fill='%23e0a55a'/%3E%3Cellipse cx='240' cy='164' rx='120' ry='38' fill='%23f5cf94'/%3E%3Cg fill='%23fff6e0'%3E%3Ccircle cx='180' cy='158' r='4'/%3E%3Ccircle cx='240' cy='150' r='3'/%3E%3Ccircle cx='290' cy='166' r='4'/%3E%3C/g%3E%3Crect x='70' y='60' width='60' height='10' rx='5' fill='%239a5418' opacity='0.5'/%3E%3Crect x='350' y='70' width='60' height='10' rx='5' fill='%239a5418' opacity='0.5'/%3E%3C/svg%3E">
+        <span class="tag">教程干货</span>
+        <span class="dur">16:24</span>
+      </div>
+      <div class="body">
+        <h3>小火焙面四十分钟：如何判断面粉炒到位</h3>
+        <p>用手心温度、颜色深浅和气味三层判断，避免炒糊与夹生，附常见失误对照。</p>
+        <div class="meta-row">
+          <span class="author"><span class="a">赵</span>赵师傅的灶台</span>
+          <div class="act-btns">
+            <button class="act like" data-n="862">♡ 862</button>
+            <button class="act fav" data-n="315">☆ 收藏</button>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="vcard">
+      <div class="cover">
+        <img alt="五种市售油茶面冲调对比测评封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23fbf2e2'/%3E%3Cg%3E%3Crect x='40' y='110' width='72' height='110' rx='12' fill='%23e8c08a'/%3E%3Crect x='50' y='126' width='52' height='46' rx='6' fill='%23c97a2b'/%3E%3Crect x='140' y='95' width='72' height='125' rx='12' fill='%23d9b483'/%3E%3Crect x='150' y='112' width='52' height='50' rx='6' fill='%239a5418'/%3E%3Crect x='240' y='120' width='72' height='100' rx='12' fill='%23e8c08a'/%3E%3Crect x='250' y='136' width='52' height='42' rx='6' fill='%23a45a1c'/%3E%3Crect x='340' y='100' width='72' height='120' rx='12' fill='%23f0d5ab'/%3E%3Crect x='350' y='118' width='52' height='48' rx='6' fill='%23c97a2b'/%3E%3C/g%3E%3Crect x='0' y='220' width='480' height='50' fill='%23e2c79d'/%3E%3C/svg%3E">
+        <span class="tag">深度测评</span>
+        <span class="dur">12:05</span>
+      </div>
+      <div class="body">
+        <h3>五款油茶面盲测：香、咸、稠、顺口怎么排</h3>
+        <p>从配料表到冲调手感逐项打分，给出适合不同口味人群的选择建议。</p>
+        <div class="meta-row">
+          <span class="author"><span class="a">阿</span>阿禾尝味记</span>
+          <div class="act-btns">
+            <button class="act like" data-n="1247">♡ 1247</button>
+            <button class="act fav" data-n="480">☆ 收藏</button>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="vcard">
+      <div class="cover">
+        <img alt="成都老巷口早餐摊冲油茶面的城市影像封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23cfe0ec'/%3E%3Crect x='0' y='170' width='480' height='100' fill='%23858d96'/%3E%3Crect x='40' y='90' width='140' height='80' fill='%23ede0cb'/%3E%3Crect x='60' y='108' width='100' height='36' fill='%23c97a2b'/%3E%3Crect x='210' y='70' width='120' height='100' fill='%23dfd3be'/%3E%3Crect x='230' y='90' width='34' height='30' fill='%239a5418'/%3E%3Crect x='276' y='90' width='34' height='30' fill='%239a5418'/%3E%3Crect x='350' y='100' width='100' height='70' fill='%23e8dcc8'/%3E%3Ccircle cx='410' cy='50' r='22' fill='%23fff3d6' opacity='0.85'/%3E%3C/svg%3E">
+        <span class="tag">城市探索</span>
+        <span class="dur">10:38</span>
+      </div>
+      <div class="body">
+        <h3>成都巷口的两块钱油茶：老摊主的三十七年</h3>
+        <p>一台老式保温桶、一把长柄勺，记录城市清晨里最稳定的一份温度。</p>
+        <div class="meta-row">
+          <span class="author"><span class="a">巷</span>巷口纪录组</span>
+          <div class="act-btns">
+            <button class="act like" data-n="679">♡ 679</button>
+            <button class="act fav" data-n="220">☆ 收藏</button>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="vcard">
+      <div class="cover">
+        <img alt="牛油与植物油炒制风味差异对比的封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f6ead6'/%3E%3Ccircle cx='140' cy='135' r='70' fill='%23f3d7a8'/%3E%3Ccircle cx='140' cy='135' r='44' fill='%23e0a55a'/%3E%3Ccircle cx='340' cy='135' r='70' fill='%23dbe8cf'/%3E%3Ccircle cx='340' cy='135' r='44' fill='%2398b57a'/%3E%3Cpath d='M210 135 L270 135' stroke='%239a5418' stroke-width='4'/%3E%3Cpath d='M258 125 L272 135 L258 145' stroke='%239a5418' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+        <span class="tag">知识科普</span>
+        <span class="dur">08:52</span>
+      </div>
+      <div class="body">
+        <h3>牛油版与素油版：同一配方为什么差别这么大</h3>
+        <p>从熔点、香气释放到入口挂舌感，解释两种油脂在油茶面里的不同表现。</p>
+        <div class="meta-row">
+          <span class="author"><span class="a">食</span>食理小组</span>
+          <div class="act-btns">
+            <button class="act like" data-n="534">♡ 534</button>
+            <button class="act fav" data-n="188">☆ 收藏</button>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="vcard">
+      <div class="cover">
+        <img alt="祖孙一起炒油茶面的家庭日常记录封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f4ded0'/%3E%3Crect x='0' y='190' width='480' height='80' fill='%23c99a72'/%3E%3Ccircle cx='150' cy='110' r='34' fill='%23e8a85c'/%3E%3Crect x='120' y='140' width='62' height='52' rx='16' fill='%23b9784a'/%3E%3Ccircle cx='290' cy='130' r='24' fill='%23f0c79a'/%3E%3Crect x='266' y='152' width='48' height='40' rx='12' fill='%23c97a2b'/%3E%3Crect x='200' y='160' width='70' height='26' rx='10' fill='%233a2410' opacity='0.7'/%3E%3C/svg%3E">
+        <span class="tag">日常记录</span>
+        <span class="dur">13:47</span>
+      </div>
+      <div class="body">
+        <h3>寒假第七天：孙女第一次学炒面，糊了半锅</h3>
+        <p>不完美的第一次也值得留下。镜头记录厨房里的笑声、焦味与重新再来。</p>
+        <div class="meta-row">
+          <span class="author"><span class="a">林</span>林间厨房</span>
+          <div class="act-btns">
+            <button class="act like" data-n="918">♡ 918</button>
+            <button class="act fav" data-n="356">☆ 收藏</button>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="vcard">
+      <div class="cover">
+        <img alt="油茶面现代改良吃法创意摆盘封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f0e8f4'/%3E%3Ccircle cx='240' cy='150' r='86' fill='%23fff'/%3E%3Ccircle cx='240' cy='150' r='64' fill='%23e8b96a'/%3E%3Ccircle cx='240' cy='150' r='40' fill='%23f6d8a4'/%3E%3Ccircle cx='240' cy='150' r='16' fill='%23a45a1c'/%3E%3Crect x='120' y='60' width='46' height='8' rx='4' fill='%23b08ac2'/%3E%3Crect x='320' y='210' width='46' height='8' rx='4' fill='%23b08ac2'/%3E%3C/svg%3E">
+        <span class="tag">创意吃法</span>
+        <span class="dur">07:30</span>
+      </div>
+      <div class="body">
+        <h3>油茶面六种新吃法：拌酸奶、做司康、当蘸料</h3>
+        <p>把传统风味带进现代厨房，给出每种的用量与口感描述，附失败提醒。</p>
+        <div class="meta-row">
+          <span class="author"><span class="a">陈</span>陈小满的实验厨房</span>
+          <div class="act-btns">
+            <button class="act like" data-n="1103">♡ 1103</button>
+            <button class="act fav" data-n="522">☆ 收藏</button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== 专题企划 ===== -->
+<section class="section" id="special">
+  <div class="sec-head">
+    <span class="eyebrow">SERIES / 专题企划</span>
+    <h2>四组持续更新的<em>风味企划</em></h2>
+    <p>不做一次性内容，而是围绕一个主题长期跟进，让手艺的细节被反复看清。</p>
+  </div>
+  <div class="special-grid">
+    <article class="special">
+      <img alt="秋炒油茶面系列专题的老灶火光封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 400'%3E%3Crect width='360' height='400' fill='%23a45a1c'/%3E%3Ccircle cx='180' cy='200' r='150' fill='%23c97a2b' opacity='0.6'/%3E%3Cellipse cx='180' cy='250' rx='120' ry='48' fill='%233a2410'/%3E%3Cellipse cx='180' cy='242' rx='100' ry='36' fill='%23e8a85c'/%3E%3Cg stroke='%23ffe9c2' stroke-width='3' opacity='0.6' fill='none'%3E%3Cpath d='M110 180 Q180 130 250 190'/%3E%3Cpath d='M130 150 Q190 110 260 160'/%3E%3C/g%3E%3Crect x='0' y='330' width='360' height='70' fill='%238a4a12'/%3E%3C/svg%3E">
+      <span class="st">更新至 12 集</span>
+      <h3>秋炒油茶面</h3>
+      <p>跟着节气炒面，记录一年中最适合动手的三个月。</p>
+    </article>
+    <article class="special">
+      <img alt="一碗面的早与晚专题的城市早餐影像封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 400'%3E%3Crect width='360' height='400' fill='%23bcd4e6'/%3E%3Ccircle cx='90' cy='90' r='46' fill='%23fff3d6'/%3E%3Crect x='0' y='260' width='360' height='140' fill='%23747f8a'/%3E%3Crect x='40' y='150' width='110' height='110' fill='%23e8dcc8'/%3E%3Crect x='200' y='180' width='130' height='80' fill='%23dfd0b3'/%3E%3Crect x='220' y='200' width='40' height='26' fill='%239a5418'/%3E%3Crect x='272' y='200' width='40' height='26' fill='%239a5418'/%3E%3C/svg%3E">
+      <span class="st">更新至 8 集</span>
+      <h3>一碗面的早与晚</h3>
+      <p>八座城市的清晨与深夜，寻找相同的那口暖香。</p>
+    </article>
+    <article class="special">
+      <img alt="手上功夫手艺人口述专题的手部特写封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 400'%3E%3Crect width='360' height='400' fill='%23e8d5b8'/%3E%3Crect x='90' y='120' width='180' height='150' rx='24' fill='%23e0a55a'/%3E%3Crect x='120' y='160' width='120' height='80' rx='14' fill='%23f5cf94'/%3E%3Ccircle cx='180' cy='200' r='26' fill='%23a45a1c' opacity='0.6'/%3E%3Crect x='150' y='270' width='60' height='90' fill='%23c99a72'/%3E%3C/svg%3E">
+      <span class="st">更新至 6 集</span>
+      <h3>手上功夫</h3>
+      <p>老师傅的口述史，讲清一件工具、一个动作的来历。</p>
+    </article>
+    <article class="special">
+      <img alt="灶台边的小事生活随笔专题的厨房一角封面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 400'%3E%3Crect width='360' height='400' fill='%23f2ddd0'/%3E%3Crect x='0' y='280' width='360' height='120' fill='%23c99a72'/%3E%3Crect x='46' y='150' width='90' height='130' rx='10' fill='%23e8c08a'/%3E%3Crect x='60' y='168' width='62' height='40' rx='6' fill='%23c97a2b'/%3E%3Crect x='180' y='180' width='80' height='100' rx='12' fill='%23dfae80'/%3E%3Ccircle cx='280' cy='200' r='40' fill='%23fff' opacity='0.6'/%3E%3C/svg%3E">
+      <span class="st">更新至 15 篇</span>
+      <h3>灶台边的小事</h3>
+      <p>短文与短片并行，记录做饭时那些说不清的情绪。</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===== 创作者矩阵 ===== -->
+<section class="section" id="creators" style="background:linear-gradient(180deg,transparent,#f8edda 25%,#f8edda 75%,transparent)">
+  <div class="sec-head">
+    <span class="eyebrow">CREATORS / 创作者矩阵</span>
+    <h2>把灶台搬进镜头的<em>六位创作者</em></h2>
+    <p>他们来自家庭厨房、面点铺、民俗研究机构与影像工作室，共同构成油茶面的内容生态。</p>
+  </div>
+  <div class="creator-grid">
+    <article class="creator">
+      <div class="av" style="background:linear-gradient(135deg,#e8a85c,#9a5418)">赵</div>
+      <div>
+        <h3>赵师傅的灶台</h3>
+        <div class="role">传统炒制 · 面点师</div>
+        <p>四十年灶台经验，擅长把火候讲成普通人听得懂的话。</p>
+        <div class="st"><span>作品 <b>216</b></span><span>粉丝 <b>18.3 万</b></span></div>
+      </div>
+    </article>
+    <article class="creator">
+      <div class="av" style="background:linear-gradient(135deg,#bcd4e6,#5c7f9e)">巷</div>
+      <div>
+        <h3>巷口纪录组</h3>
+        <div class="role">城市探索 · 纪录片</div>
+        <p>专注早晨六点的街巷，用长镜头留下摊位的日常节奏。</p>
+        <div class="st"><span>作品 <b>98</b></span><span>粉丝 <b>11.6 万</b></span></div>
+      </div>
+    </article>
+    <article class="creator">
+      <div class="av" style="background:linear-gradient(135deg,#e8c08a,#a45a1c)">林</div>
+      <div>
+        <h3>林间厨房</h3>
+        <div class="role">日常记录 · 家庭料理</div>
+        <p>把失败和成功一起剪进片子，让厨房回归真实的样子。</p>
+        <div class="st"><span>作品 <b>154</b></span><span>粉丝 <b>9.8 万</b></span></div>
+      </div>
+    </article>
+    <article class="creator">
+      <div class="av" style="background:linear-gradient(135deg,#c9b7e0,#7a5c9e)">陈</div>
+      <div>
+        <h3>陈小满的实验厨房</h3>
+        <div class="role">创意吃法 · 风味研发</div>
+        <p>把老味道拆开重组，用可复现的步骤验证每一次想象。</p>
+        <div class="st"><span>作品 <b>187</b></span><span>粉丝 <b>13.2 万</b></span></div>
+      </div>
+    </article>
+    <article class="creator">
+      <div class="av" style="background:linear-gradient(135deg,#a8c79a,#4e7a46)">食</div>
+      <div>
+        <h3>食理小组</h3>
+        <div class="role">知识科普 · 食品研究</div>
+        <p>从成分与工艺出发，解释风味差异背后的科学依据。</p>
+        <div class="st"><span>作品 <b>76</b></span><span>粉丝 <b>7.4 万</b></span></div>
+      </div>
+    </article>
+    <article class="creator">
+      <div class="av" style="background:linear-gradient(135deg,#e8b8a0,#a4553a)">阿</div>
+      <div>
+        <h3>阿禾尝味记</h3>
+        <div class="role">深度测评 · 风味笔记</div>
+        <p>坚持盲测与打分表，用统一标准对比不同产地的成品。</p>
+        <div class="st"><span>作品 <b>132</b></span><span>粉丝 <b>10.5 万</b></span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== 故事/随笔 ===== -->
+<section class="section" id="stories">
+  <div class="sec-head">
+    <span class="eyebrow">STORIES / 灶台随笔</span>
+    <h2>影像之外的<em>几段文字</em></h2>
+    <p>有些细节镜头装不下，就写下来。它们与视频互为注脚。</p>
+  </div>
+  <div class="story-wrap">
+    <article class="story">
+      <h3>面粉变黄的那一分钟</h3>
+      <p>炒面最难的不是翻炒，而是等待。前一秒还是雪白，下一秒就整锅泛金。老师傅说，这一分钟里不能分神，火大火小全靠鼻子和耳朵判断。第一次学的时候我不信，结果糊了半锅。</p>
+      <div class="who">—— 林间厨房 · 日常记录</div>
+    </article>
+    <article class="story">
+      <h3>保温桶里的城市时钟</h3>
+      <p>巷口那台保温桶，早上五点二十准时冒热气。摊主说，来喝的人大多不说话，站着喝完就走。油茶面对他们来说不是美食，是一天开始的信号。这个信号响了三十七年。</p>
+      <div class="who">—— 巷口纪录组 · 城市探索</div>
+    </article>
+    <article class="story">
+      <h3>咸与甜的边界</h3>
+      <p>有人坚持油茶面必须是咸的，有人从小吃甜口。其实两边都没错，只是家乡不同。做测评这些年，我越来越不敢替别人定义“正宗”，只能把每种做法的来龙去脉讲清楚。</p>
+      <div class="who">—— 阿禾尝味记 · 风味笔记</div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== 影像墙 ===== -->
+<section class="section" id="wall" style="background:linear-gradient(180deg,transparent,#f8edda 30%,#f8edda 70%,transparent)">
+  <div class="sec-head">
+    <span class="eyebrow">GALLERY / 影像墙</span>
+    <h2>社区上传的<em>瞬间切片</em></h2>
+    <p>来自投稿的静帧，尺寸不一，却都指向同一口热气。</p>
+  </div>
+  <div class="wall">
+    <figure class="big">
+      <img alt="大图：铁锅翻炒中升腾的热气与面粉" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 500'%3E%3Crect width='600' height='500' fill='%23f6e3c4'/%3E%3Cellipse cx='300' cy='350' rx='220' ry='80' fill='%233a2410'/%3E%3Cellipse cx='300' cy='334' rx='195' ry='66' fill='%23e0a55a'/%3E%3Cellipse cx='300' cy='324' rx='160' ry='50' fill='%23f5cf94'/%3E%3Cg stroke='%23fff6e0' stroke-width='6' opacity='0.55' fill='none'%3E%3Cpath d='M200 240 Q300 170 400 250'/%3E%3Cpath d='M240 195 Q320 140 430 215'/%3E%3C/g%3E%3C/svg%3E">
+      <figcaption>赵师傅的灶台 · 翻炒瞬间</figcaption>
+    </figure>
+    <figure>
+      <img alt="中图：青花瓷碗中冲调好的油茶面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220'%3E%3Crect width='300' height='220' fill='%23eef3f5'/%3E%3Ccircle cx='150' cy='120' r='74' fill='%23fff'/%3E%3Ccircle cx='150' cy='120' r='56' fill='%23ddb27c'/%3E%3Ccircle cx='150' cy='120' r='36' fill='%23efd3a6'/%3E%3Ccircle cx='150' cy='120' r='16' fill='%23a45a1c'/%3E%3C/svg%3E">
+      <figcaption>家常一碗 · 冲调成品</figcaption>
+    </figure>
+    <figure>
+      <img alt="小图：案板上的核桃仁与白芝麻" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220'%3E%3Crect width='300' height='220' fill='%23f3e0c4'/%3E%3Ccircle cx='90' cy='110' r='26' fill='%238a5a2b'/%3E%3Ccircle cx='150' cy='130' r='18' fill='%23a8723a'/%3E%3Ccircle cx='210' cy='100' r='22' fill='%238a5a2b'/%3E%3Cg fill='%23fff3d6'%3E%3Ccircle cx='120' cy='160' r='4'/%3E%3Ccircle cx='180' cy='170' r='4'/%3E%3Ccircle cx='240' cy='150' r='4'/%3E%3C/g%3E%3C/svg%3E">
+      <figcaption>备料台 · 果仁与芝麻</figcaption>
+    </figure>
+    <figure class="wide">
+      <img alt="宽图：清晨街边摊位的蒸汽与人群剪影" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 220'%3E%3Crect width='600' height='220' fill='%23bcd4e6'/%3E%3Crect x='0' y='150' width='600' height='70' fill='%23858d96'/%3E%3Crect x='60' y='80' width='120' height='70' fill='%23e8dcc8'/%3E%3Crect x='210' y='60' width='150' height='90' fill='%23dfd0b3'/%3E%3Crect x='240' y='80' width='30' height='26' fill='%239a5418'/%3E%3Crect x='290' y='80' width='30' height='26' fill='%239a5418'/%3E%3Cg fill='%23555d66'%3E%3Ccircle cx='420' cy='120' r='14'/%3E%3Crect x='408' y='134' width='24' height='40' rx='8'/%3E%3Ccircle cx='470' cy='126' r='12'/%3E%3Crect x='460' y='138' width='20' height='36' rx='7'/%3E%3C/g%3E%3Ccircle cx='540' cy='46' r='22' fill='%23fff3d6' opacity='0.8'/%3E%3C/svg%3E">
+      <figcaption>巷口纪录组 · 清晨摊位</figcaption>
+    </figure>
+    <figure class="tall">
+      <img alt="竖图：老式铁锅与长柄木铲的特写" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 420'%3E%3Crect width='300' height='420' fill='%23e8d5b8'/%3E%3Cellipse cx='150' cy='290' rx='120' ry='60' fill='%233a2410'/%3E%3Cellipse cx='150' cy='278' rx='100' ry='46' fill='%23c98a45'/%3E%3Crect x='130' y='80' width='16' height='180' rx='8' fill='%23a45a1c' transform='rotate(14 138 170)'/%3E%3C/svg%3E">
+      <figcaption>工具志 · 铁锅与木铲</figcaption>
+    </figure>
+    <figure>
+      <img alt="小图：搪瓷罐里储存的炒面" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220'%3E%3Crect width='300' height='220' fill='%23f4e2cd'/%3E%3Crect x='90' y='70' width='120' height='120' rx='16' fill='%23e8c08a'/%3E%3Crect x='104' y='88' width='92' height='40' rx='6' fill='%23c97a2b'/%3E%3Crect x='90' y='64' width='120' height='16' rx='8' fill='%239a5418'/%3E%3C/svg%3E">
+      <figcaption>林间厨房 · 搪瓷罐</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 评价 ===== -->
+<section class="section" id="reviews">
+  <div class="sec-head">
+    <span class="eyebrow">VOICES / 社区口碑</span>
+    <h2>来自观看者的<em>真实反馈</em></h2>
+    <p>这些评论来自不同城市、不同做法，却都在同一种香味里停留过。</p>
+  </div>
+  <div class="review-grid">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>照着赵师傅的十六分钟教程做了一遍，第一次没糊。最有用的是那句“闻着有坚果香就差不多了”。</p>
+      <div class="who"><span class="a" style="background:#c97a2b">周</span>周口的厨房</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★☆</div>
+      <p>盲测那期很客观，没有一味吹某一家。看完去买了两款，确实跟测评里说的口感一致。</p>
+      <div class="who"><span class="a" style="background:#5c8f9e">沈</span>沈一碗</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>我是陕西人，看到西安那期差点看哭。摊主说话的腔调跟我爸一模一样，那种早晨的感觉回来了。</p>
+      <div class="who"><span class="a" style="background:#9a6a2b">许</span>许北</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>网站加载很快，视频清晰度选择也多。最重要的是没有乱七八糟的广告，看得很舒服。</p>
+      <div class="who"><span class="a" style="background:#7a5c9e">蒋</span>蒋同学</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★☆</div>
+      <p>创意吃法那期有点意外，拌酸奶居然好吃。建议下次多做几组对照，把用量写得更细一点。</p>
+      <div class="who"><span class="a" style="background:#4e7a46">梁</span>梁小满</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>作为在南方长大的北方人，油茶面是小时候的早餐。这里能找到这么多做法，很难得。</p>
+      <div class="who"><span class="a" style="background:#a4553a">闫</span>闫思远</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 动态 + FAQ ===== -->
+<section class="section" id="news">
+  <div class="sec-head">
+    <span class="eyebrow">NEWS &amp; FAQ / 企业动态与帮助</span>
+    <h2>官方发布与<em>常见问题</em></h2>
+    <p>内容更新、活动报名与平台规则，都会在这里同步。</p>
+  </div>
+  <div class="dyn-faq">
+    <div>
+      <div class="dyn-item">
+        <div class="date">2024.10.12</div>
+        <div>
+          <h4>《秋炒油茶面》第三季开播</h4>
+          <p>新一季走进五个省份的家庭厨房，每周五更新一集，首集聚焦老灶铁锅的翻砂诀窍。</p>
+        </div>
+      </div>
+      <div class="dyn-item">
+        <div class="date">2024.09.28</div>
+        <div>
+          <h4>手艺征集活动开启报名</h4>
+          <p>面向家庭炒制者、面点师与民俗记录者开放，优秀作品将获得官方推荐位与拍摄支持。</p>
+        </div>
+      </div>
+      <div class="dyn-item">
+        <div class="date">2024.09.15</div>
+        <div>
+          <h4>油茶面风味词库 V2 发布</h4>
+          <p>新增 80 条风味描述与工艺术语，供创作者在标题与简介中统一表达，可免费下载。</p>
+        </div>
+      </div>
+      <div class="dyn-item">
+        <div class="date">2024.08.30</div>
+        <div>
+          <h4>创作者扶持计划第二期上线</h4>
+          <p>提供拍摄设备借用、剪辑指导与流量支持，重点面向中小体量的真实记录者。</p>
+        </div>
+      </div>
+      <div class="dyn-item" style="border-bottom:none">
+        <div class="date">2024.08.08</div>
+        <div>
+          <h4>社区投稿规范更新</h4>
+          <p>明确食材来源标注与工艺步骤说明要求，进一步提升内容的可复核性与专业度。</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <details class="faq" open>
+        <summary>油茶面是哪个地区的传统食物？</summary>
+        <p>油茶面在不同地区有各自的叫法与做法，常见于北方与西北的早餐场景。平台不替任何一地定义“唯一正宗”，而是把各地的制作差异如实记录，供你按口味选择。</p>
+      </details>
+      <details class="faq">
+        <summary>在家炒制需要准备哪些工具？</summary>
+        <p>一口厚底铁锅、一把长柄木铲、一个能密封的容器即可。厚底锅受热均匀，是减少糊锅的关键；木铲不易刮伤锅面，也方便判断面粉的干湿状态。</p>
+      </details>
+      <details class="faq">
+        <summary>平台的内容都是原创吗？</summary>
+        <p>是。站内视频均由官方内容团队或认证创作者原创拍摄并授权发布，影像与文字素材均为正版或自制。引用他人素材时会在简介中标注来源。</p>
+      </details>
+      <details class="faq">
+        <summary>如何参与手艺征集活动？</summary>
+        <p>在页尾的投稿入口填写联系方式与作品简介即可。工作人员会在五个工作日内回复，符合要求的作品将安排进一步沟通与拍摄排期。</p>
+      </details>
+      <details class="faq">
+        <summary>可以下载视频用于教学吗？</summary>
+        <p>个人学习与家庭使用可直接在播放页获取。用于课程、门店或公开活动的，请通过联系入口提交用途说明，我们会提供相应的授权方式。</p>
+      </details>
+      <details class="faq">
+        <summary>内容更新频率是怎样的？</summary>
+        <p>常规内容每周更新三到五期，专题企划按季推进。公告条会同步当期最重要的更新与活动信息，也可以关注企业动态栏目查看完整记录。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 投稿/联系 ===== -->
+<section class="section" id="contact" style="padding-top:0">
+  <div class="cta-band">
+    <div>
+      <h2>把你家的那锅油茶面，讲给我们听</h2>
+      <p>无论是一段手机拍的炒制过程，还是一份写在纸上的老配方，都值得被认真记录。留下联系方式，我们的编辑会与你联系，一起把这份味道做成看得见的影像。</p>
+    </div>
+    <form class="cta-form" id="submitForm">
+      <input type="text" placeholder="你的称呼" required aria-label="你的称呼">
+      <input type="text" placeholder="联系方式（微信 / 邮箱）" required aria-label="联系方式">
+      <input type="text" placeholder="一句话介绍你的油茶面故事" aria-label="故事简介">
+      <button type="submit">提交投稿意向</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="flogo"><span class="mark">油</span>油茶面</div>
+      <p>油茶面官方网站，是一个专注传统炒制风味的原创视频品牌平台。我们深耕这一垂直领域，以高清影像记录手艺细节，以真实故事连接创作者与观众，持续运营一个值得信赖的内容社区。</p>
+      <p style="margin-top:12px">合作与内容授权请联系品牌内容中心，我们重视每一份素材的来源与每一位创作者的署名。</p>
+    </div>
+    <div>
+      <h4>内容栏目</h4>
+      <ul>
+        <li><a href="#focus">焦点视频</a></li>
+        <li><a href="#videos">风味内容</a></li>
+        <li><a href="#special">专题企划</a></li>
+        <li><a href="#wall">影像墙</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>关于平台</h4>
+      <ul>
+        <li><a href="#creators">创作者矩阵</a></li>
+        <li><a href="#news">企业动态</a></li>
+        <li><a href="#reviews">社区口碑</a></li>
+        <li><a href="#contact">投稿与联系</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>使用帮助</h4>
+      <ul>
+        <li><a href="#news">常见问题</a></li>
+        <li><a href="#contact">内容授权</a></li>
+        <li><a href="#contact">合作洽谈</a></li>
+        <li><a href="#contact">反馈建议</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© 2024 油茶面品牌官方网站 · 版权所有 · 持续运营中</span>
+    <span>内容备案号占位 · 企业信息占位 · 用户至上 · 匠心记录</span>
+  </div>
+</footer>
+
+<button id="topBtn" aria-label="回到顶部">↑</button>
+<div class="toast" id="toast"></div>
+
+<!-- 投稿弹窗 -->
+<div class="modal-mask" id="modalMask">
+  <div class="modal">
+    <button class="close" id="modalClose" aria-label="关闭">×</button>
+    <h3>投稿意向已记录</h3>
+    <p class="sub">补充一句你的故事，我们会在五个工作日内联系你。</p>
+    <textarea placeholder="例如：我家在甘肃，母亲每年秋分炒面，用的是老铁锅……" aria-label="补充故事"></textarea>
+    <input type="text" placeholder="方便联系的时间" aria-label="联系时间">
+    <button class="send" id="modalSend">确认提交</button>
+  </div>
+</div>
+
+<!-- 分享弹窗 -->
+<div class="modal-mask" id="shareMask">
+  <div class="modal">
+    <button class="close" id="shareClose" aria-label="关闭">×</button>
+    <h3>分享这段影像</h3>
+    <p class="sub">选择你喜欢的方式，把这份暖香传出去。</p>
+    <div class="share-row">
+      <button data-share="微信">微信</button>
+      <button data-share="微博">微博</button>
+      <button data-share="链接">复制链接</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var toast = document.getElementById('toast');
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var header = document.getElementById('header');
+  document.getElementById('menuToggle').addEventListener('click', function(){
+    header.classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.addEventListener('click', function(){ header.classList.remove('open'); });
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('searchInput');
+  var searchFeedback = document.getElementById('searchFeedback');
+  var searchData = [
+    {k:['炒','火候','锅','翻砂'], tip:'找到 6 条炒制相关影像，推荐《翻砂十八铲：火候全解》'},
+    {k:['配方','比例','备料','材料'], tip:'找到 4 条备料内容，推荐《备料清单：面粉、牛油、芝麻与核桃的比例》'},
+    {k:['城市','西安','成都','街','早'], tip:'找到 8 条城市探索内容，推荐《西安回坊清晨五点》'},
+    {k:['测评','盲测','对比','口碑'], tip:'找到 5 条测评内容，推荐《五款油茶面盲测》'},
+    {k:['创意','新吃','改良','酸奶'], tip:'找到 3 条创意吃法，推荐《油茶面六种新吃法》'},
+    {k:['人物','访谈','故事','奶奶'], tip:'找到 7 条人物故事，推荐《奶奶的搪瓷罐》'}
+  ];
+  function doSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      searchFeedback.classList.remove('show');
+      searchFeedback.textContent = '';
+      return;
+    }
+    var hit = null;
+    for(var i=0;i<searchData.length;i++){
+      for(var j=0;j<searchData[i].k.length;j++){
+        if(q.indexOf(searchData[i].k[j]) > -1){ hit = searchData[i]; break; }
+      }
+      if(hit) break;
+    }
+    searchFeedback.textContent = hit
+      ? '“' + q + '” ' + hit.tip
+      : '“' + q + '” 暂无完全匹配的结果，试试“炒制”“配方”“城市”“测评”等关键词。';
+    searchFeedback.classList.add('show');
+  }
+  document.getElementById('searchBtn').addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+
+  /* 点赞 */
+  document.querySelectorAll('.act.like').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var n = parseInt(btn.getAttribute('data-n'), 10);
+      if(btn.classList.contains('on')){
+        btn.classList.remove('on');
+        n = n - 1;
+        btn.textContent = '♡ ' + n;
+      } else {
+        btn.classList.add('on');
+        n = n + 1;
+        btn.textContent = '♥ ' + n;
+        showToast('已点赞，感谢你的认可');
+      }
+      btn.setAttribute('data-n', n);
+    });
+  });
+
+  /* 收藏 */
+  document.querySelectorAll('.act.fav').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var n = parseInt(btn.getAttribute('data-n') || '0', 10);
+      if(btn.classList.contains('on')){
+        btn.classList.remove('on');
+        btn.textContent = '☆ 收藏';
+        showToast('已取消收藏');
+      } else {
+        btn.classList.add('on');
+        btn.textContent = '★ 已收藏';
+        showToast('已加入收藏，可稍后继续看');
+      }
+    });
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('topBtn');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ topBtn.classList.add('show'); }
+    else { topBtn.classList.remove('show'); }
+  });
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 投稿表单 */
+  var modalMask = document.getElementById('modalMask');
+  document.getElementById('submitForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    modalMask.classList.add('show');
+  });
+  document.getElementById('modalClose').addEventListener('click', function(){
+    modalMask.classList.remove('show');
+  });
+  document.getElementById('modalSend').addEventListener('click', function(){
+    modalMask.classList.remove('show');
+    showToast('投稿已提交，编辑会尽快联系你');
+  });
+  modalMask.addEventListener('click', function(e){
+    if(e.target === modalMask) modalMask.classList.remove('show');
+  });
+
+  /* 分享 */
+  var shareMask = document.getElementById('shareMask');
+  document.querySelectorAll('.mini, .vcard, .focus-main').forEach(function(card){
+    card.addEventListener('dblclick', function(){
+      shareMask.classList.add('show');
+    });
+  });
+  document.getElementById('shareClose').addEventListener('click', function(){
+    shareMask.classList.remove('show');
+  });
+  shareMask.addEventListener('click', function(e){
+    if(e.target === shareMask) shareMask.classList.remove('show');
+  });
+  document.querySelectorAll('.share-row button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var type = btn.getAttribute('data-share');
+      if(type === '链接'){
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(window.location.href).then(function(){
+            showToast('链接已复制到剪贴板');
+          }).catch(function(){
+            showToast('复制失败，可手动复制地址栏链接');
+          });
+        } else {
+          showToast('当前环境不支持自动复制，请手动复制地址栏链接');
+        }
+      } else {
+        showToast('已唤起' + type + '分享，请确认内容');
+      }
+      shareMask.classList.remove('show');
+    });
+  });
+
+  /* 卡片悬停轻提示（仅桌面） */
+  document.querySelectorAll('.special').forEach(function(el){
+    el.addEventListener('click', function(){
+      var t = el.querySelector('h3');
+      if(t) showToast('专题《' + t.textContent + '》正在更新');
+    });
+  });
+})();
+</script>
+</body>
+      </html>
